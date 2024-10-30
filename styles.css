@@ -1,0 +1,136 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light and Dark Mode Colors */
+body.light-mode {
+  background-color: white;
+  color: #333;
+}
+
+body a {
+  text-decoration: none;
+  color: #02b0db;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+/* Container and Layout */
+body, .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Header with Centered Logo and Catchphrase */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo {
+  border-radius: 20px;
+}
+
+.catchphrase {
+  font-family: 'Parisienne', cursive;
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Carousel Styling */
+.carousel {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Carousel Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 2rem;
+  padding: 15px 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contact Section Styling */
+.contact {
+  margin: 20px;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+/* descrizione */
+.descrizione {
+  margin: 20px;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+.contact-header {
+  font-family: 'Parisienne', cursive;	
+  margin-bottom: 10px;
+  font-size: 2.7rem
+}
+
+/*Position Section*/
+.position {
+  font-family: 'Parisienne', cursive;	
+  margin-bottom: 10px;
+  font-size: 2.7rem
+};
+
