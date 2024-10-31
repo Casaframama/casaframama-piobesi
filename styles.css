@@ -114,6 +114,13 @@ body, .container {
   padding: 10px;
   font-size: 1.4rem;
 }
+
+.contact img {
+   width: 80px;
+   height: auto;
+   padding-right: 30px;
+}
+
 /* descrizione */
 .descrizione {
   margin: 20px;
@@ -129,8 +136,10 @@ body, .container {
 
 /*Position Section*/
 .position {
+  margin-top: 20px;
   font-family: 'Parisienne', cursive;	
   margin-bottom: 10px;
   font-size: 2.7rem
 };
+
 
