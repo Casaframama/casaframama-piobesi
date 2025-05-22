@@ -1,90 +1,97 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casa Framama</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Casa Framama</title>
 </head>
-<body>
-  <!-- Theme Toggle Button -->
-  <button id="darkModeToggle" class="theme-toggle">🌙</button>
-
-  <!-- Centered Logo and Catchphrase -->
-  <header class="header">
-    <img src="./img/logo.jpg" alt="Airbnb Logo" class="logo">
-    <p class="catchphrase">Un posto dove puoi sentirti a casa</p>
-  </header>
-
-  <!-- Main Container -->
-  <div class="container">
-
-    <!-- Image Carousel with Controls -->
-    <div class="carousel">
-      <button class="carousel-control prev" id="prevBtn"><i class="nf nf-md-chevron_left"></i></button>
-      <div class="carousel-inner">
-	<img src="./img/1.jpg" alt="Airbnb Photo 1">
-        <img src="./img/pagina iniziale.jpg" alt="facciata">
-        <img src="./img/2.jpg" alt="Airbnb Photo 2">
-	<img src="./img/3.jpg" alt="Airbnb Photo 3">
-	<img src="./img/4.jpg" alt="Airbnb Photo 4">
-	<img src="./img/5.jpg" alt="Airbnb Photo 5">
-	<img src="./img/6.jpg" alt="Airbnb Photo 6">
-        <img src="./img/7.jpg" alt="Airbnb Photo 7">
-      </div>
-      <button class="carousel-control next" id="nextBtn"><i class="nf nf-md-chevron_right"></i></button>
+<body class="light-mode">
+    <div class="language-selector">
+        <button class="language-menu-button" aria-label="Select Language" onclick="toggleLanguageMenu()">
+            <span class="current-language">🌐</span>
+            <span class="selected-lang">IT</span>
+        </button>
+        <div class="language-menu">
+            <button class="language-option" data-lang="it" onclick="selectLanguage('it')">
+                <span>🇮🇹</span> Italiano
+            </button>
+            <button class="language-option" data-lang="en" onclick="selectLanguage('en')">
+                <span>🇬🇧</span> English
+            </button>
+            <button class="language-option" data-lang="fr" onclick="selectLanguage('fr')">
+                <span>🇫🇷</span> Français
+            </button>
+        </div>
     </div>
-   <!-- Descrizione -->
-    <section class="descrizione">
-      <p class="contact-header">Benvenuti a casa nostra<p>
-      <p>Casa Framama è un grazioso alloggio nella nostra casa di famiglia, che può ospitare fino a 6 persone.
-	 <br> 
-	 <br>   
-         Situata nel Roero a Piobesi D’alba, a pochi passi da Alba, ideale per chi vuole tranquillità rimanendo vicino al cuore delle Langhe.
-	 <br>
-	 <br>
-         E’ composto da 3 camere da letto, di cui due matrimoniali con aria condizionata è una con due letti singoli, con 2 bagni in comune, cucina accessoriata è ampio salone con zona relax con aria condizionata.
-	 <br>
-	 <br>
-         L’ Ingresso è al secondo piano, accedendo da scala esterna. Alla proprietà si accede da cancello esterno, dotato di telecomando, all’interno si può usufruire del cortile dove si può parcheggiare almeno una macchina al coperto.
-        </p>	      
-    </section>
-	  
-    <!-- Contact Section -->
-    <section class="contact">
-      <p class="contact-header">Contatti<p>
-      <p><i class="nf nf-fa-mobile_phone"></i> Leonardo: <a href="tel:3397225062">3397225062</a></p>
-      <br>
-      <p><i class="nf nf-fa-mobile_phone"></i> Daniela: <a href="tel:3381778553">3381778553</a></p>
-      <br>
-      <p><i class="nf nf-cod-mail"></i>  <a href="mailto:casaframama@gmail.com">casaframama@gmail.com</a></p>
-      <br>
-      <br>
-      <a href="https://www.airbnb.it/rooms/1104352365502984443?guests=1&adults=1&s=67&unique_share_id=b3b3db49-52b4-498b-a8fc-0acffc0020a4" width="30" ><img src="./img/airbnb.png" alt=""></a>
-      <a href="https://www.booking.com/hotel/it/casa-framama.it.html?label=gen173nr-1BCAsocUIMY2FzYS1mcmFtYW1hSDNYBGhxiAEBmAEUuAEYyAEM2AEB6AEBiAIBqAIEuAL5gpm4BsACAdICJDVlZTgwNDAzLWFiOTctNDFiMS05OGMyLTdlY2I4NzBhZWY5MtgCBeACAQ&sid=2c05de8ae378b3a163a1f60e357493de&dist=0&keep_landing=1&sb_price_type=total&type=total&" class="loghi" ><img src="./img/booking.png" alt=""></a>
-    </section>
 
-    <section class="position">
-      <p>Dove Trovarci<p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.2158480103913!2d7.977060177274473!3d44.735612981753796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787f7ebff4d1fe5%3A0x9dd5e56efebe5c4b!2sVia%20S.%20Rocco%2C%2017A%2C%2012040%20Piobesi%20d&#39;Alba%20CN!5e0!3m2!1sit!2sit!4v1729861516225!5m2!1sit!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-    <footer> 
-      <br>
-      <br>
-      <p> Codice Fiscale: CRCLRD81L18A124A
-        <br>
-          CIN: IT004168C2YTBUH84F
-        <br>
-        <br>
-      </p>
-    </footer>
-    
-  </div>
+    <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
 
-  <script src="scripts.js"></script>
+    <div class="header">
+        <img src="./img/logo.jpg" alt="Airbnb Logo" class="logo">
+        <h1 id="un-posto-dove-puoi-sentirti-a-casa" class="catchphrase">Un posto dove puoi sentirti a casa</h1>
+    </div>
+
+    <div class="container">
+        <div class="carousel">
+            <button class="carousel-control prev">‹</button>
+            <div class="carousel-inner">
+                <img src="./img/1.jpg" alt="Airbnb Photo 1">
+                <img src="./img/pagina iniziale.jpg" alt="Facciata">
+                <img src="./img/2.jpg" alt="Airbnb Photo 2">
+                <img src="./img/3.jpg" alt="Airbnb Photo 3">
+                <img src="./img/4.jpg" alt="Airbnb Photo 4">
+                <img src="./img/5.jpg" alt="Airbnb Photo 5">
+                <img src="./img/6.jpg" alt="Airbnb Photo 6">
+                <img src="./img/7.jpg" alt="Airbnb Photo 7">
+            </div>
+            <button class="carousel-control next">›</button>
+        </div>
+
+        <div class="section descrizione">
+            <h2 id="benvenuti-a-casa-nostra" class="welcome-text">Benvenuti a casa nostra</h2>
+            <div class="description">
+                <p>Casa Framama è un grazioso alloggio nella nostra casa di famiglia, che può ospitare fino a 6 persone.</p>
+                <p>Situata nel Roero a Piobesi D'alba, a pochi passi da Alba, ideale per chi vuole tranquillità rimanendo vicino al cuore delle Langhe.</p>
+                <p>E' composto da 3 camere da letto, di cui due matrimoniali con aria condizionata è una con due letti singoli, con 2 bagni in comune, cucina accessoriata è ampio salone con zona relax con aria condizionata.</p>
+                <p>L'Ingresso è al secondo piano, accedendo da scala esterna. Alla proprietà si accede da cancello esterno, dotato di telecomando, all'interno si può usufruire del cortile dove si può parcheggiare almeno una macchina al coperto.</p>
+            </div>
+        </div>
+
+        <div class="section contact">
+            <h2 id="contatti" class="contact-header">Contatti</h2>
+            <p>Leonardo: <a href="tel:3397225062">3397225062</a></p>
+            <p>Daniela: <a href="tel:3381778553">3381778553</a></p>
+            <p><a href="mailto:casaframama@gmail.com">casaframama@gmail.com</a></p>
+            <div class="booking-links">
+                <a href="https://www.airbnb.it/rooms/1104352365502984443?guests=1&adults=1&s=67&unique_share_id=b3b3db49-52b4-498b-a8fc-0acffc0020a4">
+                    <img src="./img/airbnb.png" alt="Airbnb" width="30">
+                </a>
+                <a href="https://www.booking.com/hotel/it/casa-framama.it.html?label=gen173nr-1BCAsocUIMY2FzYS1mcmFtYW1hSDNYBGhxiAEBmAEUuAEYyAEM2AEB6AEBiAIBqAIEuAL5gpm4BsACAdICJDVlZTgwNDAzLWFiOTctNDFiMS05OGMyLTdlY2I4NzBhZWY5MtgCBeACAQ&sid=2c05de8ae378b3a163a1f60e357493de">
+                    <img src="./img/booking.png" alt="Booking.com" class="loghi">
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 id="dove-trovarci" class="position">Dove Trovarci</h2>
+	     <iframe 
+        	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11538.67458705!2d8.083974!3d44.66582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cd240451dd0457%3A0xa561299f9befe665!2s12040%20Piobesi%20d&#39;Alba%20CN%2C%20Italy!5e0!3m2!1sen!2sus!4v1700416345678"
+        	width="100%" 
+        	height="450" 
+        	style="border:0;" 
+        	allowfullscreen="" 
+        	loading="lazy" 
+        	referrerpolicy="no-referrer-when-downgrade">
+    	     </iframe>
+        </div>
+
+        <footer>
+            <p>Codice Fiscale: CRCLRD81L18A124A</p>
+            <p>CIN: IT004168C2YTBUH84F</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
-
