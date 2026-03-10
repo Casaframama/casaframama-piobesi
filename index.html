@@ -1,97 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Casa Framama</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Framama - Vacanza nelle Langhe</title>
+  <meta name="description" content="Casa Framama: accogliente alloggio a Piobesi d'Alba nelle Langhe. 3 camere, fino a 6 ospiti, cucina, salone e parcheggio. Prenota la tua vacanza relax!">
+  <meta name="keywords" content="casa vacanza, Langhe, Airbnb, Piobesi d'Alba, alloggio, turistico">
+  <meta property="og:title" content="Casa Framama - Vacanza nelle Langhe">
+  <meta property="og:description" content="Un posto dove puoi sentirti a casa nelle colline delle Langhe">
+  <meta property="og:image" content="./img/1.jpg">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="light-mode">
-    <div class="language-selector">
-        <button class="language-menu-button" aria-label="Select Language" onclick="toggleLanguageMenu()">
-            <span class="current-language">🌐</span>
-            <span class="selected-lang">IT</span>
-        </button>
-        <div class="language-menu">
-            <button class="language-option" data-lang="it" onclick="selectLanguage('it')">
-                <span>🇮🇹</span> Italiano
-            </button>
-            <button class="language-option" data-lang="en" onclick="selectLanguage('en')">
-                <span>🇬🇧</span> English
-            </button>
-            <button class="language-option" data-lang="fr" onclick="selectLanguage('fr')">
-                <span>🇫🇷</span> Français
-            </button>
+<body>
+  <div class="top-controls">
+    <button id="langToggle" class="lang-toggle"><i class="nf nf-md-translate"></i> <span>IT</span></button>
+    <button id="darkModeToggle" class="theme-toggle"><i class="nf nf-md-moon_waning_crescent"></i></button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-carousel">
+      <div class="hero-carousel-inner">
+        <img src="./img/pagina iniziale.jpg" alt="Facciata Casa Framama" class="hero-image">
+        <img src="./img/1.jpg" alt="Interno Casa Framama" class="hero-image">
+        <img src="./img/2.jpg" alt="Salotto" class="hero-image">
+        <img src="./img/3.jpg" alt="Cucina" class="hero-image">
+        <img src="./img/4.jpg" alt="Bagno" class="hero-image">
+        <img src="./img/5.jpg" alt="Camera" class="hero-image">
+        <img src="./img/6.jpg" alt="Dettaglio" class="hero-image">
+        <img src="./img/7.jpg" alt="Esterno" class="hero-image">
+      </div>
+      <button class="hero-carousel-prev" id="heroPrev"><i class="nf nf-md-chevron_left"></i></button>
+      <button class="hero-carousel-next" id="heroNext"><i class="nf nf-md-chevron_right"></i></button>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-i18n="hero-title">Casa Framama</h1>
+      <p class="subtitle" data-i18n="hero-subtitle">Un posto dove puoi sentirti a casa</p>
+      <div class="cta-dropdown" id="ctaDropdown">
+        <button class="cta-button" id="ctaButton" data-i18n="book-btn">Prenota la tua vacanza <i class="nf nf-md-chevron_down"></i></button>
+        <div class="cta-dropdown-menu">
+          <a href="https://www.airbnb.it/rooms/1104352365502984443" target="_blank">
+            <img src="./img/airbnb.png" alt="Airbnb"> <span data-i18n="book-airbnb">Prenota su Airbnb</span>
+          </a>
+          <a href="https://www.booking.com/hotel/it/casa-framama.it.html" target="_blank">
+            <img src="./img/booking.png" alt="Booking"> <span data-i18n="book-booking">Prenota su Booking</span>
+          </a>
         </div>
+      </div>
     </div>
+  </section>
 
-    <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-
-    <div class="header">
-        <img src="./img/logo.jpg" alt="Airbnb Logo" class="logo">
-        <h1 id="un-posto-dove-puoi-sentirti-a-casa" class="catchphrase">Un posto dove puoi sentirti a casa</h1>
-    </div>
-
+  <!-- Servizi -->
+  <section class="servizi">
     <div class="container">
-        <div class="carousel">
-            <button class="carousel-control prev">‹</button>
-            <div class="carousel-inner">
-                <img src="./img/1.jpg" alt="Airbnb Photo 1">
-                <img src="./img/pagina iniziale.jpg" alt="Facciata">
-                <img src="./img/2.jpg" alt="Airbnb Photo 2">
-                <img src="./img/3.jpg" alt="Airbnb Photo 3">
-                <img src="./img/4.jpg" alt="Airbnb Photo 4">
-                <img src="./img/5.jpg" alt="Airbnb Photo 5">
-                <img src="./img/6.jpg" alt="Airbnb Photo 6">
-                <img src="./img/7.jpg" alt="Airbnb Photo 7">
-            </div>
-            <button class="carousel-control next">›</button>
+      <h2 class="section-title" data-i18n="services-title">I Nostri Servizi</h2>
+      <div class="servizi-grid">
+        <div class="servizio-item">
+          <i class="nf nf-md-wifi"></i>
+          <h3 data-i18n="service-wifi">WiFi</h3>
         </div>
-
-        <div class="section descrizione">
-            <h2 id="benvenuti-a-casa-nostra" class="welcome-text">Benvenuti a casa nostra</h2>
-            <div class="description">
-                <p>Casa Framama è un grazioso alloggio nella nostra casa di famiglia, che può ospitare fino a 6 persone.</p>
-                <p>Situata nel Roero a Piobesi D'alba, a pochi passi da Alba, ideale per chi vuole tranquillità rimanendo vicino al cuore delle Langhe.</p>
-                <p>E' composto da 3 camere da letto, di cui due matrimoniali con aria condizionata è una con due letti singoli, con 2 bagni in comune, cucina accessoriata è ampio salone con zona relax con aria condizionata.</p>
-                <p>L'Ingresso è al secondo piano, accedendo da scala esterna. Alla proprietà si accede da cancello esterno, dotato di telecomando, all'interno si può usufruire del cortile dove si può parcheggiare almeno una macchina al coperto.</p>
-            </div>
+        <div class="servizio-item">
+          <i class="nf nf-md-car"></i>
+          <h3 data-i18n="service-parking">Parcheggio</h3>
         </div>
-
-        <div class="section contact">
-            <h2 id="contatti" class="contact-header">Contatti</h2>
-            <p>Leonardo: <a href="tel:3397225062">3397225062</a></p>
-            <p>Daniela: <a href="tel:3381778553">3381778553</a></p>
-            <p><a href="mailto:casaframama@gmail.com">casaframama@gmail.com</a></p>
-            <div class="booking-links">
-                <a href="https://www.airbnb.it/rooms/1104352365502984443?guests=1&adults=1&s=67&unique_share_id=b3b3db49-52b4-498b-a8fc-0acffc0020a4">
-                    <img src="./img/airbnb.png" alt="Airbnb" width="30">
-                </a>
-                <a href="https://www.booking.com/hotel/it/casa-framama.it.html?label=gen173nr-1BCAsocUIMY2FzYS1mcmFtYW1hSDNYBGhxiAEBmAEUuAEYyAEM2AEB6AEBiAIBqAIEuAL5gpm4BsACAdICJDVlZTgwNDAzLWFiOTctNDFiMS05OGMyLTdlY2I4NzBhZWY5MtgCBeACAQ&sid=2c05de8ae378b3a163a1f60e357493de">
-                    <img src="./img/booking.png" alt="Booking.com" class="loghi">
-                </a>
-            </div>
+        <div class="servizio-item">
+          <i class="nf nf-md-snowflake"></i>
+          <h3 data-i18n="service-ac">Aria Condizionata</h3>
         </div>
-
-        <div class="section">
-            <h2 id="dove-trovarci" class="position">Dove Trovarci</h2>
-	     <iframe 
-        	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11538.67458705!2d8.083974!3d44.66582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cd240451dd0457%3A0xa561299f9befe665!2s12040%20Piobesi%20d&#39;Alba%20CN%2C%20Italy!5e0!3m2!1sen!2sus!4v1700416345678"
-        	width="100%" 
-        	height="450" 
-        	style="border:0;" 
-        	allowfullscreen="" 
-        	loading="lazy" 
-        	referrerpolicy="no-referrer-when-downgrade">
-    	     </iframe>
+        <div class="servizio-item">
+          <i class="nf nf-md-silverware_fork_knife"></i>
+          <h3 data-i18n="service-kitchen">Cucina Attrezzata</h3>
         </div>
-
-        <footer>
-            <p>Codice Fiscale: CRCLRD81L18A124A</p>
-            <p>CIN: IT004168C2YTBUH84F</p>
-        </footer>
+        <div class="servizio-item">
+          <i class="nf nf-md-television"></i>
+          <h3>TV</h3>
+        </div>
+        <div class="servizio-item">
+          <i class="nf nf-md-tree"></i>
+          <h3 data-i18n="service-garden">Giardino</h3>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script src="scripts.js"></script>
+  <!-- Galleria -->
+  <section class="galleria">
+    <div class="container">
+      <h2 class="section-title" data-i18n="gallery-title">La Nostra Casa</h2>
+      <div class="galleria-grid">
+        <img src="./img/1.jpg" alt="Camera matrimoniale" onclick="openLightbox(this.src)">
+        <img src="./img/2.jpg" alt="Salotto" onclick="openLightbox(this.src)">
+        <img src="./img/3.jpg" alt="Cucina" onclick="openLightbox(this.src)">
+        <img src="./img/4.jpg" alt="Bagno" onclick="openLightbox(this.src)">
+        <img src="./img/5.jpg" alt="Camera doppia" onclick="openLightbox(this.src)">
+        <img src="./img/6.jpg" alt="Dettaglio interno" onclick="openLightbox(this.src)">
+        <img src="./img/7.jpg" alt="Esterno" onclick="openLightbox(this.src)">
+        <img src="./img/pagina iniziale.jpg" alt="Facciata" onclick="openLightbox(this.src)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Galleria">
+  </div>
+
+  <!-- Descrizione -->
+  <section class="descrizione">
+    <div class="container">
+      <h2 class="section-title" data-i18n="welcome-title">Benvenuti a Casa Nostra</h2>
+      <div class="descrizione-content">
+        <p data-i18n="desc1">Benvenuti a <span class="highlight">Casa Framama</span>, un incantevole appartamento situato nel cuore delle Langhe, a Piobesi d'Alba. Circondati dalle colline morbide del Roero, potrete immergvi in una delle zone più affascinanti del Piemonte.</p>
+        <p data-i18n="desc2">A soli 5 km da Alba, città famosa in tutto il mondo per i suoi tartufi e il Barolo, la nostra struttura rappresenta <span class="highlight">la base perfetta</span> per esplorare castelli, vigneti e borghi medievali, concedendovi al contempo la serenità di un soggiorno rurale.</p>
+        <p data-i18n="desc3">La nostra casa può ospitare fino a <span class="highlight">6 ospiti</span> e dispone di:</p>
+        <ul class="features-list" data-i18n="desc4">
+          <li>3 camere luminose (2 matrimoniali con aria condizionata + 1 doppia)</li>
+          <li>2 bagni moderni</li>
+          <li>Cucina completamente attrezzata</li>
+          <li>Spazioso soggiorno con zona relax e aria condizionata</li>
+        </ul>
+        <p data-i18n="desc5">L'appartamento si trova al <span class="highlight">secondo piano</span> con ingresso indipendente. Potrete raggiungerlo comodamente attraverso una caratteristica scala esterna e parcheggiare la vostra auto al coperto nel nostro cortile privato, accessibile con telecomando.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Posizione -->
+  <section class="posizione">
+    <div class="container">
+      <h2 class="section-title" data-i18n="location-title">Dove Siamo</h2>
+      <div class="posizione-grid">
+        <div class="posizione-info">
+          <h3 data-i18n="location-city">Piobesi d'Alba</h3>
+          <p><i class="nf nf-md-map_marker"></i> Via S. Rocco, 17A</p>
+          <p>12040 Piobesi d'Alba (CN)</p>
+          <p><i class="nf nf-md-information"></i> <span data-i18n="location-region">Piemonte, Langhe e Roero</span></p>
+          <p><i class="nf nf-md-wine"></i> <span data-i18n="location-near">A 5 km da Alba, città del tartufo</span></p>
+        </div>
+        <div class="posizione-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.2158480103913!2d7.977060177274473!3d44.735612981753796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787f7ebff4d1fe5%3A0x9dd5e56efebe5c4b!2sVia%20S.%20Rocco%2C%2017A%2C%2012040%20Piobesi%20d&#39;Alba%20CN!5e0!3m2!1sit!2sit!4v1729861516225!5m2!1sit!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contatti -->
+  <section class="contatti">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contacts-title">Contatti</h2>
+      <div class="contatti-grid">
+        <div class="contatto-item">
+          <i class="nf nf-md-account_circle"></i>
+          <h3>Leonardo</h3>
+          <a href="tel:3397225062">339 7225062</a>
+        </div>
+        <div class="contatto-item">
+          <i class="nf nf-md-account_circle"></i>
+          <h3>Daniela</h3>
+          <a href="tel:3381778553">338 1778553</a>
+        </div>
+        <div class="contatto-item">
+          <i class="nf nf-cod-mail"></i>
+          <h3>Email</h3>
+          <a href="mailto:casaframama@gmail.com">casaframama@gmail.com</a>
+        </div>
+      </div>
+      <div class="booking-links">
+        <a href="https://www.airbnb.it/rooms/1104352365502984443" target="_blank">
+          <img src="./img/airbnb.png" alt="Prenota su Airbnb">
+        </a>
+        <a href="https://www.booking.com/hotel/it/casa-framama.it.html" target="_blank">
+          <img src="./img/booking.png" alt="Prenota su Booking">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-i18n="footer-brand">Casa Framama - Vacanze nelle Langhe</p>
+    <p data-i18n="footer-cf">Codice Fiscale: CRCLRD81L18A124A</p>
+    <p class="cin" data-i18n="footer-cin">CIN: IT004168C2YTBUH84F</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
